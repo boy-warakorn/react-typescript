@@ -5,3 +5,33 @@ html {
 body {
   margin: 0;
 }
+
+.my-node-enter-active {
+  animation: moveFromTop 700ms;
+  transition: all 1000ms;
+}
+.my-node-exit {
+  animation: moveFromBottom 700ms forwards;
+}
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -75%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -75%);
+  }
+}
